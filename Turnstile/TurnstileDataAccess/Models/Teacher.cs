@@ -14,9 +14,9 @@
 
         public string ContentType { get; set; }
 
-        public Gender2 TeachersGender { get; set; }
+        public Gender TeachersGender { get; set; }
 
-        public DateTime BirthDate { get; set; }
+        public int Age { get; set; }
 
         public string CommingTime { get; set; }
 
@@ -24,10 +24,5 @@
 
 
         public List<Student> Students { get; set; }
-    }
-    public enum Gender2
-    {
-        Male,
-        Famale
     }
 }

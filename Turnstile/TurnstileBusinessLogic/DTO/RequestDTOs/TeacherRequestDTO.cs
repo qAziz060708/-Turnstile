@@ -15,9 +15,9 @@ namespace TurnstileBusinessLogic.DTO.RequestDTOs
 
         public IFormFile formFile { get; set; }
 
-        public Gender2 TeachersGender { get; set; }
+        public Gender TeachersGender { get; set; }
 
-        public DateTime BirthDate { get; set; }
+        public int Age { get; set; }
 
         public string CommingTime { get; set; }
 
@@ -36,13 +36,13 @@ public class TeacherRequestDTOValidator : AbstractValidator<TeacherRequestDTO>
             .NotNull().WithMessage("Teacher Last Name must be entered.")
             .NotEmpty().WithMessage("Teacher Last Name cannot be empty.");
 
-        RuleFor(u => u.TeachersGender)
-            .NotNull().WithMessage("Teachers Gender must be entered.")
-            .IsInEnum().WithMessage("Teachers Gender Entered incorrectly.");
-
         RuleFor(u => u.Group)
             .NotNull().WithMessage("Group must be entered.")
             .NotEmpty().WithMessage("Group cannot be empty.");
+
+        RuleFor(u => u.TeachersGender)
+            .NotNull().WithMessage("Teachers Gender must be entered.")
+            .IsInEnum().WithMessage("Teachers Gender Entered incorrectly.");
 
        // RuleFor(u => u.BirthDate)
            // .NotNull().WithMessage("Birth date must be entered.")

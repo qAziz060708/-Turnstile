@@ -16,7 +16,7 @@
 
         public Gender StudentsGender { get; set; }
 
-        public DateTime BirthDate { get; set; }
+        public int Age { get; set; }
 
         public string CommingTime { get; set; }
 

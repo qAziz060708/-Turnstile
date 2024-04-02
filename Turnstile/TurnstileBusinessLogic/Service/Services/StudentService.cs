@@ -30,7 +30,8 @@ namespace TurnstileBusinessLogic.Service.Services
                 var student = _mapper.Map<Student>(studentRequestDTO);
                 student.ContentType = studentRequestDTO.formFile.ContentType;
                 student.ContentOfImage = fileContent;
-                return await _studentRepository.AddStudentAsync(student);
+                var resultID = await _studentRepository.AddStudentAsync(student);
+                return resultID;
             }
             catch (AutoMapperMappingException ex)
             {

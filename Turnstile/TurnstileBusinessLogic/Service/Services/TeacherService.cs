@@ -5,7 +5,6 @@ using TurnstileBusinessLogic.DTO.ResponseDTOs;
 using TurnstileBusinessLogic.Service.IServices;
 using TurnstileDataAccess.Models;
 using TurnstileDataAccess.Repository.IRepositories;
-using TurnstileDataAccess.Repository.Repositories;
 
 namespace TurnstileBusinessLogic.Service.Services
 {

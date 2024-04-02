@@ -4,6 +4,8 @@ namespace TurnstileBusinessLogic.DTO.ResponseDTOs
 {
     public class TeacherResponseDTO
     {
+        public int TeacherId { get; set; }
+
         public string TeacherFullName { get; set; }
 
         public byte[] ContentOfImage { get; set; }
@@ -12,8 +14,8 @@ namespace TurnstileBusinessLogic.DTO.ResponseDTOs
 
         public string Group { get; set; }
 
-        public Gender2 TeachersGender { get; set; }
+        public Gender TeachersGender { get; set; }
 
-        public DateTime BirthDate { get; set; }
+        public int Age { get; set; }
     }
 }
