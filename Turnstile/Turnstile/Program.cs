@@ -10,7 +10,6 @@ builder.Services.AddControllers().AddNewtonsoftJson(op => op.SerializerSettings.
 var config = builder.Configuration.GetSection("ConnectionStrings");
 builder.Services.AddDbContext<TurnstileDbContext>(option => option.UseNpgsql(config["Connect"]));
 builder.Services.RegisterServices(builder.Configuration);
-builder.Services.AddScoped<TurnstileDbContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

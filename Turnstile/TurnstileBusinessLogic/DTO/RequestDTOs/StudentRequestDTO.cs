@@ -22,6 +22,8 @@ namespace TurnstileBusinessLogic.DTO.RequestDTOs
         public string CommingTime { get; set; }
 
         public string LeavingTime { get; set; }
+
+        public int TeacherId { get; set; }
     }
 }
 public class StudentRequestDTOValidator : AbstractValidator<StudentRequestDTO>

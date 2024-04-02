@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TurnstileBusinessLogic.DTO.RequestDTOs;
 using TurnstileBusinessLogic.Service.IServices;
 using TurnstileBusinessLogic.Service.Services;
+using TurnstileDataAccess.DbConnection;
 using TurnstileDataAccess.Repository.IRepositories;
 using TurnstileDataAccess.Repository.Repositories;
 
@@ -15,6 +16,8 @@ namespace TurnstileBusinessLogic.ServiceExtentions
         {
             // Mvc
             services.AddMvc();
+
+            services.AddScoped<TurnstileDbContext>();
 
             // Validation
             services.AddScoped<IValidator<StudentRequestDTO>, StudentRequestDTOValidator>();
